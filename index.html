@@ -164,7 +164,15 @@
       padding: 0;
       border: 0;
       background: transparent;
-      color: var(--text);
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .footer-phone:hover,
+    .footer-phone:focus-visible {
+      color: var(--red);
       font-weight: 800;
     }
 
@@ -783,6 +791,7 @@
         0 0 0 0.35rem rgba(5, 5, 5, 0.12),
         0 1.25rem 2.4rem rgba(0, 0, 0, 0.28);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      text-decoration: none;
     }
 
     .final-phone:hover,
@@ -2090,7 +2099,7 @@
       <div class="wrap cta-inner">
         <p class="kicker">Нужен эвакуатор сейчас?</p>
         <h2>Прямой звонок</h2>
-        <button type="button" class="final-phone phone-gate js-phone-gate" data-phone-gate="true" data-phone-label="show">Открыть номер<span class="phone-gate-status" aria-live="polite"></span></button>
+        <a class="final-phone" href="tel:+79494999445" aria-label="Позвонить +7 949 499 94 45">+7 (949) 499-94-45</a>
       </div>
     </section>
   </main>
@@ -2098,11 +2107,9 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>Эвакуатор Донецк и ДНР 24/7. Без форм, только прямой звонок.</span>
-      <button type="button"  class="footer-phone phone-gate js-phone-gate" data-phone-gate="true" data-phone-label="show">Показать номер<span class="phone-gate-status" aria-live="polite"></span></button>
+      <a class="footer-phone" href="tel:+79494999445" aria-label="Позвонить +7 949 499 94 45">+7 (949) 499-94-45</a>
     </div>
   </footer>
-
-  <button type="button" class="mobile-call phone-gate js-phone-gate" data-phone-gate="true" data-phone-label="call">Позвонить<span class="phone-gate-status" aria-live="polite"></span></button>
 
   <script>
     const revealItems = document.querySelectorAll(".reveal");
@@ -2152,6 +2159,5 @@
       });
     }
   </script>
-  <script src="antibot-phone.js?v=20260609-goal-fix" defer></script>
 </body>
 </html>
