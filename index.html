@@ -1370,6 +1370,8 @@
       object-position: center bottom;
       filter: contrast(1.04) saturate(1.05) brightness(1.06);
       mix-blend-mode: normal;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, 0.92) 76%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, 0.92) 76%, transparent 100%);
     }
 
     .hero-visual::after {
@@ -1417,6 +1419,12 @@
       font-weight: 800;
       line-height: 1;
       box-shadow: 0 0 18px rgba(255, 45, 29, 0.18);
+    }
+
+    .benefit-icon-247 {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0;
     }
 
     .hero-benefit strong {
@@ -1714,6 +1722,10 @@
         font-size: 0.92rem;
       }
 
+      .benefit-icon-247 {
+        font-size: 0.56rem;
+      }
+
       .hero-benefit strong {
         font-size: 0.66rem;
       }
@@ -1839,7 +1851,7 @@
             <span>24/7</span>
           </div>
           <div class="hero-benefit">
-            <span class="benefit-icon">□</span>
+            <span class="benefit-icon benefit-icon-247">24/7</span>
             <strong>Без выходных</strong>
             <span>Работаем ежедневно</span>
           </div>
