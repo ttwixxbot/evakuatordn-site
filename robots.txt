@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: evakuatordn.ru
+Sitemap: https://evakuatordn.ru/sitemap.xml

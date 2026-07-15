@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Ночной выезд эвакуатора</title>
+  <desc id="desc">Стилизованное изображение эвакуатора в ночной городской сцене</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#090b10"/>
+      <stop offset="58%" stop-color="#111625"/>
+      <stop offset="100%" stop-color="#1a2235"/>
+    </linearGradient>
+    <linearGradient id="truck" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0d1017"/>
+      <stop offset="100%" stop-color="#262f44"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ff0033"/>
+      <stop offset="100%" stop-color="#ffe279"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="36" stdDeviation="30" flood-color="#020305" flood-opacity="0.36"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <circle cx="1264" cy="176" r="108" fill="#ffe07b"/>
+  <circle cx="1264" cy="176" r="158" fill="#ffe07b" opacity="0.08"/>
+  <g opacity="0.22">
+    <rect x="114" y="266" width="72" height="370" rx="14" fill="#2a3143"/>
+    <rect x="212" y="196" width="94" height="440" rx="14" fill="#2a3143"/>
+    <rect x="332" y="302" width="64" height="334" rx="14" fill="#2a3143"/>
+    <rect x="1118" y="208" width="82" height="428" rx="14" fill="#2a3143"/>
+    <rect x="1218" y="156" width="104" height="480" rx="14" fill="#2a3143"/>
+    <rect x="1346" y="252" width="70" height="384" rx="14" fill="#2a3143"/>
+  </g>
+  <path d="M0 742Q440 624 1600 824v276H0z" fill="#07090d"/>
+  <g opacity="0.92">
+    <rect x="140" y="902" width="210" height="16" rx="8" fill="#ff0033"/>
+    <rect x="430" y="902" width="210" height="16" rx="8" fill="#ff0033"/>
+    <rect x="720" y="902" width="210" height="16" rx="8" fill="#ff0033"/>
+    <rect x="1010" y="902" width="210" height="16" rx="8" fill="#ff0033"/>
+    <rect x="1300" y="902" width="160" height="16" rx="8" fill="#ff0033"/>
+  </g>
+  <g filter="url(#shadow)" transform="translate(250 336)">
+    <ellipse cx="554" cy="500" rx="388" ry="68" fill="#040507" opacity="0.42"/>
+    <g transform="skewX(-8)">
+      <path d="M240 272h510l56 84H292z" fill="url(#truck)"/>
+      <rect x="260" y="302" width="468" height="12" rx="6" fill="url(#accent)"/>
+      <rect x="184" y="198" width="138" height="158" rx="28" fill="url(#truck)"/>
+      <path d="M176 224h126c32 0 56 24 56 56v76H176z" fill="#101624"/>
+      <path d="M212 178h86c52 0 88 28 108 82H172c12-42 40-82 40-82z" fill="#ffffff"/>
+      <path d="M232 198h70c28 0 54 12 70 38H206c8-20 18-38 26-38z" fill="#dce2ea"/>
+      <path d="M390 164h208c72 0 122 40 160 108H330c18-64 48-108 60-108z" fill="#ffffff"/>
+      <path d="M422 184h112c46 0 86 18 114 54H378c12-34 30-54 44-54z" fill="#dce2ea"/>
+      <path d="M748 264h88l64-128h32l-42 128 30 96h-44l-22-58h-62z" fill="#ff0033"/>
+      <rect x="802" y="184" width="20" height="80" rx="10" fill="#ff0033"/>
+      <rect x="868" y="128" width="14" height="66" rx="7" fill="#ffffff"/>
+      <circle cx="286" cy="390" r="74" fill="#090c12"/>
+      <circle cx="690" cy="390" r="74" fill="#090c12"/>
+      <circle cx="286" cy="390" r="32" fill="#ff0033"/>
+      <circle cx="690" cy="390" r="32" fill="#ff0033"/>
+      <rect x="204" y="278" width="72" height="12" rx="6" fill="#ff0033"/>
+      <rect x="574" y="214" width="82" height="10" rx="5" fill="#ff0033"/>
+      <rect x="342" y="352" width="176" height="14" rx="7" fill="#dbe2eb" opacity="0.68"/>
+    </g>
+  </g>
+  <rect x="114" y="108" width="448" height="96" rx="28" fill="#ffffff" opacity="0.08"/>
+  <text x="164" y="170" fill="#ff0033" font-family="Space Grotesk, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="0">РАБОТАЕМ НОЧЬЮ</text>
+</svg>
