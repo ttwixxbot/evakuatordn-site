@@ -1420,9 +1420,11 @@
       display: grid;
       gap: 0.28rem;
       min-height: 5.25rem;
-      padding: 0 1.35rem;
+      min-width: 0;
+      padding: 0 0.72rem;
       border-right: 1px solid rgba(255, 255, 255, 0.18);
       align-content: start;
+      overflow: hidden;
     }
 
     .hero-benefit:first-child {
@@ -1465,18 +1467,24 @@
     }
 
     .hero-benefit strong {
+      display: block;
+      max-width: 100%;
       font-family: "Barlow Condensed", Arial, sans-serif;
-      font-size: 1.02rem;
+      font-size: clamp(0.82rem, 0.86vw, 0.94rem);
       line-height: 1.07;
       text-transform: uppercase;
+      overflow-wrap: anywhere;
     }
 
     .hero-benefit span:last-child {
+      display: block;
+      max-width: 100%;
       color: #9d9891;
       font-size: 0.76rem;
       font-weight: 700;
       line-height: 1.25;
       text-transform: uppercase;
+      overflow-wrap: anywhere;
     }
 
     .mobile-call {
