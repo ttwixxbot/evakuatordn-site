@@ -1047,7 +1047,7 @@
       --text: #f7f5f2;
       --muted: #aba6a0;
       --line: rgba(255, 255, 255, 0.12);
-      --container: 1172px;
+      --container: 1360px;
     }
 
     body {
@@ -1144,12 +1144,13 @@
 
     .hero {
       isolation: isolate;
-      min-height: calc(100svh - 4.7rem);
+      min-height: auto;
       align-content: start;
-      padding: clamp(1.8rem, 3.2vw, 2.8rem) 0 1rem;
+      padding: clamp(3.2rem, 6vh, 5rem) 0 clamp(1.8rem, 3vh, 2.6rem);
       background:
-        linear-gradient(90deg, #050505 0%, #050505 43%, rgba(5, 5, 5, 0.83) 57%, rgba(5, 5, 5, 0.36) 100%),
-        radial-gradient(circle at 70% 76%, rgba(255, 45, 29, 0.22), transparent 32rem);
+        linear-gradient(90deg, #050505 0%, #050505 38%, rgba(5, 5, 5, 0.78) 57%, rgba(5, 5, 5, 0.22) 100%),
+        radial-gradient(circle at 76% 58%, rgba(255, 45, 29, 0.28), transparent 34rem),
+        radial-gradient(circle at 56% 94%, rgba(255, 45, 29, 0.16), transparent 29rem);
     }
 
     .hero::before {
@@ -1171,13 +1172,20 @@
     }
 
     .hero-grid {
-      grid-template-columns: minmax(0, 0.92fr) minmax(28rem, 1.08fr);
-      align-items: center;
-      min-height: calc(100svh - 8.5rem);
-      gap: clamp(1.5rem, 3vw, 3.5rem);
+      grid-template-columns: minmax(31rem, 0.9fr) minmax(36rem, 1.1fr);
+      grid-template-areas:
+        "copy visual"
+        "benefits visual";
+      align-items: start;
+      min-height: auto;
+      column-gap: clamp(1.8rem, 3vw, 3.2rem);
+      row-gap: clamp(1.4rem, 2.6vw, 2rem);
     }
 
     .hero-copy {
+      grid-area: copy;
+      position: relative;
+      z-index: 2;
       align-content: start;
       gap: 0.62rem;
       padding-top: 0;
@@ -1202,7 +1210,7 @@
     .hero h1 {
       max-width: 100%;
       color: #f4f1ec;
-      font-size: clamp(3.25rem, 4.7vw, 4.65rem);
+      font-size: clamp(3.8rem, 5.4vw, 5.75rem);
       line-height: 0.9;
       letter-spacing: 0;
       text-shadow:
@@ -1353,11 +1361,15 @@
     }
 
     .hero-visual {
+      grid-area: visual;
       position: relative;
       z-index: 0;
       width: 100%;
       min-width: 0;
-      height: clamp(21rem, 34vw, 30rem);
+      width: calc(100% + clamp(3rem, 8vw, 8rem));
+      height: clamp(30rem, 42vw, 43rem);
+      margin-left: 0;
+      overflow: hidden;
       pointer-events: none;
     }
 
@@ -1375,7 +1387,7 @@
 
     .hero-visual img {
       z-index: 1;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center bottom;
       filter: contrast(1.04) saturate(1.05) brightness(1.06);
       mix-blend-mode: normal;
@@ -1384,24 +1396,31 @@
     }
 
     .hero-visual::after {
-      content: none;
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.78) 6%, rgba(5, 5, 5, 0) 18%),
+        linear-gradient(180deg, #050505 0%, rgba(5, 5, 5, 0) 15%, rgba(5, 5, 5, 0) 72%, #050505 100%);
     }
 
     .hero-benefits {
-      grid-column: 1 / -1;
+      grid-area: benefits;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      width: min(42rem, 100%);
-      align-self: end;
-      margin-top: 0.85rem;
+      width: min(44rem, 100%);
+      align-self: start;
+      margin-top: 0;
       color: #ffffff;
     }
 
     .hero-benefit {
       display: grid;
       gap: 0.28rem;
-      min-height: 4.7rem;
-      padding: 0 1.15rem;
+      min-height: 5.25rem;
+      padding: 0 1.35rem;
       border-right: 1px solid rgba(255, 255, 255, 0.18);
       align-content: start;
     }
@@ -1466,7 +1485,15 @@
 
     @media (min-width: 1180px) {
       .hero-grid {
-        grid-template-columns: minmax(0, 0.9fr) minmax(32rem, 1.1fr);
+        grid-template-columns: minmax(32rem, 0.86fr) minmax(42rem, 1.14fr);
+      }
+
+      .hero-visual {
+        margin-left: clamp(-2.6rem, -2vw, -1.2rem);
+      }
+
+      .hero-benefits {
+        max-width: 44rem;
       }
     }
 
@@ -1486,7 +1513,14 @@
 
       .hero-grid {
         grid-template-columns: 1fr;
+        grid-template-areas: none;
         min-height: auto;
+      }
+
+      .hero-copy,
+      .hero-visual,
+      .hero-benefits {
+        grid-area: auto;
       }
 
       .hero h1 {
@@ -1497,6 +1531,10 @@
         width: min(48rem, 100%);
         height: min(27rem, 54vw);
         margin: 0 auto;
+      }
+
+      .hero-visual img {
+        object-fit: contain;
       }
     }
 
